@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['bicycle', 'bus', 'car', 'motorcycle', 'truck']
+
+roboflow:
+  workspace: linh-gia
+  project: linh-gia
+  version: dataset
+  license: Private
+  url: https://app.roboflow.com/linh-gia/linh-gia/dataset
