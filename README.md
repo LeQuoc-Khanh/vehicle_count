@@ -6,7 +6,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 
 Đồ án môn học **Xử lý ảnh và Thị giác máy tính (Mã HP: 121036)**[cite: 5].  
-Dự án được phát triển bởi nhóm sinh viên chuyên ngành Kỹ thuật Phần mềm, trường Đại học Giao thông Vận tải TP.HCM (UTH), bao gồm: Vũ Trí Dũng, Thân Văn Ký, Hoàng Mạnh Đức, Nguyễn Thị Hoài Linh, Nguyễn Thành Nam, và Cao Xuân Quyết.
+Dự án được phát triển bởi nhóm sinh viên chuyên ngành Kỹ thuật Phần mềm, trường Đại học Giao thông Vận tải TP.HCM (UTH), bao gồm: Vũ Trí Dũng, Lê Quốc Khánh, Vũ Gia Linh, Lê Ngọc Bích Loan, Đỗ Anh Tuấn và Nguyễn Thành Thông.
 
 Hệ thống này được thiết kế để giải quyết bài toán quản lý lưu lượng giao thông thực tế: tự động phát hiện, theo dõi quỹ đạo và đếm số lượng các loại phương tiện (ô tô, xe máy, xe buýt) di chuyển qua một tuyến đường.
 
@@ -48,7 +48,7 @@ Hệ thống không chỉ sử dụng AI như một "hộp đen" mà áp dụng 
 
 ## 3. Dữ liệu thực nghiệm (Dataset)
 
-* **Video Test:** Được quay/thu thập từ giao thông thực tế tại Việt Nam (`video.mp4`, `video1.mp4`, `video2.mp4`).
+* **Video Test:** Được quay/thu thập từ giao thông thực tế tại Việt Nam (`video1.mp4`).
 
 * **Dataset Huấn luyện:** Hệ thống tham khảo và có thể Fine-tune thêm bằng bộ dữ liệu `vietnam - vdataset linh-gia`[cite: 4]. Bộ dữ liệu gồm 565 ảnh giao thông Việt Nam, đã được gán nhãn (annotate) chuẩn format YOLOv8, lấy từ nền tảng Roboflow[cite: 4].
 
@@ -70,8 +70,7 @@ VEHICLE_COUNT/
 ├── get_roi.py                    # Tool tương tác click chuột lấy toạ độ ROI
 ├── xuly_anh.ipynb                # Code Jupyter tiền xử lý, giảm nhiễu ảnh
 ├── yolov8*.pt                    # Trọng số mô hình YOLO (n, s, m, l, x)
-├── result.csv                    # File báo cáo số liệu thống kê cuối cùng
-├── video*.mp4                    # Các video giao thông thực tế đầu vào
+├── video1*.mp4                    # Các video giao thông thực tế đầu vào
 └── output_counting.mp4           # Video kết quả đầu ra (có vẽ bounding box, vạch đếm)
 ```
 
@@ -123,5 +122,3 @@ Nhấn ESC nếu muốn dừng ngang[cite: 2].
 Sau khi hoàn tất tiến trình, hệ thống sẽ tự động sinh ra:
 
 * **Video Demo (`output_counting.mp4`)**: Bản render video đã vẽ đè đồ họa trực quan[cite: 2].
-
-* **File báo cáo định lượng (`result.csv`)**: Thống kê số lượng theo từng lớp xe (Car, Motorcycle, Bus) và tổng cộng, đáp ứng đúng tiêu chí đánh giá bằng số liệu của đồ án[cite: 1].
